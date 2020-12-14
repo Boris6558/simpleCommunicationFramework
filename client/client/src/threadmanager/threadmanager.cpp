@@ -68,8 +68,7 @@ void ThreadManager::Stop(int run_thread)
 	{
 		return;
 	}
-	
-	// 如果循环执行的线程，在lambda里用future停止线程
+
 	if (m_is_stop[run_thread])
 	{
 		m_is_stop[run_thread] = false;

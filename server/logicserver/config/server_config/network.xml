@@ -1,0 +1,18 @@
+<config>
+	<server_info>
+		<data>
+			<ip>127.0.0.1</ip>
+			<port>3014</port>
+		</data>
+	</server_info>
+	
+	<db_info>
+		<data>
+			<ip>127.0.0.1</ip>
+			<user>root</user>
+			<passwd>rootroot</passwd>
+			<database>giv</database>
+			<port>3306</port>
+		</data>
+	</db_info>
+</config>

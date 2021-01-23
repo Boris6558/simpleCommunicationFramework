@@ -8,6 +8,8 @@
 #include "def/threaddef.hpp"
 #include "def/basedef.hpp"
 
+// 可以进行优化不必每次Start都new 一个线程  可以做成线程池[挖坑先]
+
 #define THREAD_MGR ThreadManager::Instance()
 
 class ThreadManager :public QObject

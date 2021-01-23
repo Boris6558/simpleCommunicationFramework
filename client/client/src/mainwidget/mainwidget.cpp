@@ -49,7 +49,7 @@ MainWidget::MainWidget(QWidget *parent)
 		THREAD_MGR.Start(
 			[&]()mutable -> void
 		{
-			TCP_C.Disconnect();
+			/*TCP_C.Disconnect();*/
 			if (TCP_C.Connect())
 			{
 				Q_EMIT TCP_C.SigConnectSuccess();
@@ -176,6 +176,7 @@ void MainWidget::OnSendWidgetConnect()
 	connect(m_send_widget, &SendWidget::SigRetMainWidget, this,
 		[=]()mutable
 	{
+		TCP_C.Disconnect();
 		this->SwitchWidget(SWITCH_SEND_TO_MAIN);
 	}
 	);

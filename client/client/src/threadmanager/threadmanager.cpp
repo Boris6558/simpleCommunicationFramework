@@ -35,6 +35,9 @@ void ThreadManager::Start(boost::function<void(void)> v_v_fun, int run_thread, i
 		return;
 	}
 
+	m_is_stop[run_thread] = true;
+	this->SetRunStatus(run_thread, RUN_STATUS_RUNNING);
+
 	m_threads[run_thread] = new Thread(v_v_fun);
 	if (run_mode == RUN_MODE_JOIN)
 	{
@@ -45,8 +48,7 @@ void ThreadManager::Start(boost::function<void(void)> v_v_fun, int run_thread, i
 		m_threads[run_thread]->detach();
 	}
 
-	m_is_stop[run_thread] = true;
-	this->SetRunStatus(run_thread, RUN_STATUS_RUNNING);
+	
 
 }
 

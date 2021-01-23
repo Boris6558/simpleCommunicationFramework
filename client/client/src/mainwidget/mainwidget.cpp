@@ -49,7 +49,7 @@ MainWidget::MainWidget(QWidget *parent)
 		THREAD_MGR.Start(
 			[&]()mutable -> void
 		{
-			/*TCP_C.Disconnect();*/
+			//TCP_C.Disconnect();
 			if (TCP_C.Connect())
 			{
 				Q_EMIT TCP_C.SigConnectSuccess();
@@ -106,6 +106,7 @@ MainWidget::MainWidget(QWidget *parent)
 			, QString::fromLocal8Bit(m_gstring.g_string[TipString::G_LINK_TIMEOUT_CONTENT].c_str()));
 
 		this->SwitchWidget(SWITCH_SEND_TO_MAIN);
+		TCP_C.Disconnect();
 	}
 		);
 

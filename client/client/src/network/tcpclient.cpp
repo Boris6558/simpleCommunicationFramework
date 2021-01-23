@@ -53,6 +53,7 @@ bool TcpClient::Connect()
 	if (ec)
 	{
 		printf("[%d] tcpclient timeout!\n",CUR_THREAD_ID);
+		this->Disconnect();
 		return false;
 	}
 	else

@@ -56,9 +56,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="src\dump\dump.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -131,5 +128,8 @@
     <ClInclude Include="src\tool\serializeboost.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
